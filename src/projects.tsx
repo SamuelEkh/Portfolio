@@ -7,7 +7,7 @@ export const Projects: IProject[] = [
     img: 'https://i.postimg.cc/gJZMp43k/portfolio.jpg',
     description: 'A react app built in TypeScript to showcase my projects.',
     tech: 'TypeScript, React, Node.js',
-    codelink: 'Somegithublink'
+    codelink: 'https://github.com/SamuelEkh/portfolio'
   },
   {
     title: 'REST API',
