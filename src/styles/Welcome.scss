@@ -1,0 +1,123 @@
+.welcome {
+  color: #fff9f0;
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Anonymous Pro', monospace; 
+
+  &__container {
+    position: relative;
+    top: 0;
+    line-height: 50px;
+  }
+
+  &__name {
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    position: relative;
+  }
+
+  &__dev {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    position: relative;
+  }
+
+  &__port {
+    position: relative;
+    font-size: 1rem;
+  }
+}
+
+.welcome__name::before,
+.welcome__name::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.welcome__dev::before, 
+.welcome__dev::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.welcome__port::before, 
+.welcome__port::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: -2px;
+  bottom: 0;
+  right: 0;
+}
+
+.welcome__name::before {
+  background: #242424;
+  animation: typewriter 2s steps(24) 1s forwards;
+}
+
+/* .welcome__name::after {
+  width: 0.125em;
+  background: #fff9f0;
+  animation: 
+    typewriter 4s steps(24) 1s forwards,
+    blink 750ms steps(24) infinite,
+} */
+
+
+.welcome__dev::before {
+  background: #242424;
+  animation: typewriter 3s steps(38) forwards;
+  animation-delay: 3s;
+}
+
+.welcome__port::before {
+  background: #242424;
+  animation: typewriter 2s steps(24) forwards;
+  animation-delay: 6s;
+}
+
+@keyframes typewriter {
+  to {
+    left: 100%; 
+  }
+}
+
+@keyframes blink {
+  to {
+    background: transparent;
+  }
+}
+
+@keyframes remove {
+  to {
+    background: transparent;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .welcome {
+    &__name {
+      font-size: 1.5rem;
+    }
+    &__dev {
+      font-size: 1.5rem;
+    }
+    &__port {
+      font-size: 1.5rem;
+    }
+  }
+}

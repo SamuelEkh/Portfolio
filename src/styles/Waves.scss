@@ -1,0 +1,63 @@
+.waves {
+  width: 100%;
+  position: relative;
+  height: 100px;
+
+  &__wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url('../images/wave.png');
+    background-size: 1000px 100px;
+  }
+
+  &__wave1 {
+    animation: moving-waves 30s linear infinite;
+    z-index: 5;
+    bottom: 0;
+  }
+
+  &__wave2 {
+    animation: moving-waves2 15s linear infinite;
+    z-index: 4;
+    animation-delay: -5s;
+    bottom: 10px;
+    opacity: 0.5;
+  }
+
+  &__wave3 {
+    animation: moving-waves 20s linear infinite;
+    z-index: 3;
+    animation-delay: -2s;
+    bottom: 15px;
+    opacity: 0.3;
+  }
+
+  &__wave4 {
+    animation: moving-waves2 10s linear infinite;
+    z-index: 2;
+    opacity: 0.7;
+    bottom: 20px
+  }
+
+}
+
+@keyframes moving-waves {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 1000px;
+  }
+}
+
+@keyframes moving-waves2 {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: -1000px;
+  }
+}

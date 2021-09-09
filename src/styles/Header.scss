@@ -1,0 +1,52 @@
+.header {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+  background-color: #242424;
+  margin: 0;
+  height: 3rem;
+  width: 100vw;
+  color: #fff9f0;
+
+
+  &__github, &__linkedin {
+    width: 1.2rem;
+    height: 1.1rem;
+  }
+
+  &__link:hover {
+    cursor: pointer;
+  }
+
+  &__name {
+    font-size: 1rem;
+    margin-left: 1rem;
+  }
+}
+
+.navigation-container {
+  position: absolute;
+  right: 10px;
+}
+
+.navigation {
+  position: relative;
+}
+
+.link-container {
+  width: 30%;
+  min-width: 400px;
+  display: flex;
+  justify-content: space-around;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    justify-content: space-around;
+
+    &__name {
+      font-size: 1.5rem;
+    }
+  }
+}
