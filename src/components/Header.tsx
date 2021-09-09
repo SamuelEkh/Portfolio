@@ -43,12 +43,12 @@ const Header: React.FC = () => {
       <div className="navigation-container">
         <div className="navigation">
           <ul>
-            <Link smooth to="projects" style={hamLinkStyle} className="header__link" onClick={handleHamburger}>Projects</Link>
-            <Link smooth to="about" style={hamLinkStyle} className="header__link" onClick={handleHamburger}>About</Link>
-            <Link smooth to="skills" style={hamLinkStyle} className="header__link" onClick={handleHamburger}>Skills</Link>
-            <Link smooth to="contact" style={hamLinkStyle} className="header__link" onClick={handleHamburger}>Contact</Link>
-            <a href="https://github.com/SamuelEkh" target="_blank"><img className="header__github" src={gitHub} /></a>
-            <a href="https://www.linkedin.com/in/samuel-ekholm-947661211/" target="_blank"><img className="header__linkedin" src={linkedIn} /></a>
+            <Link smooth to="projects" style={hamLinkStyle} className="header__link header__burgerlinks" onClick={handleHamburger}>Projects</Link>
+            <Link smooth to="about" style={hamLinkStyle} className="header__link header__burgerlinks" onClick={handleHamburger}>About</Link>
+            <Link smooth to="skills" style={hamLinkStyle} className="header__link header__burgerlinks" onClick={handleHamburger}>Skills</Link>
+            <Link smooth to="contact" style={hamLinkStyle} className="header__link header__burgerlinks" onClick={handleHamburger}>Contact</Link>
+            <a href="https://github.com/SamuelEkh" target="_blank" className="header__burgerlinks">Github {'>'}</a>
+            <a href="https://www.linkedin.com/in/samuel-ekholm-947661211/" target="_blank" className="header__burgerlinks">LinkedIn {'>'}</a>
           </ul>
 
           <div className="hamburger-container" onClick={handleHamburger}>
